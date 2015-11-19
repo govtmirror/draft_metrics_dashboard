@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SPP Dash</title>
+
+    <!-- DOC style -->
+    <link href="css/doc_banner.css" rel="stylesheet">
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS + JS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/dygraph/1.1.1/dygraph-combined-dev.js"></script>
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!--Link Head-->
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/b/bc/US-DeptOfCommerce-Seal.png">
+
+
+</head>
+<style>
+    #huh {
+          position: relative;
+          top: 20%;
+          font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+          font-size: 18px;
+          text-align: center;
+          width: 40%;
+          text-shadow: 1px 1px white;
+          z-index:2;
+        }
+    #whoa{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .box{
+    display: none;
+    width: 100%;
+}
+
+a:hover + .box,.box:hover{
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+    </style>
+<body>
+
+<!--Banner-->
+<div id="page-wrapper">
+  <div id="page" class="page">
+
+    <div id="header-wrapper">
+      <div class="container clearfix">
+        <header id="header" class="clearfix" role="banner">
+
+                      <!-- start: Branding -->
+            <div id="branding" class="branding-elements clearfix circle-logo">
+
+                              <div id="logo">
+                  <div class="inner-logo-wrapper">
+                    <a href="/" class="active"><img class="site-logo" src="https://www.commerce.gov/sites/all/themes/doc/doc_theme/logo.png" alt="Department of Commerce" /></a>                  </div>
+                </div>
+              
+                              <!-- start: Site name and Slogan hgroup -->
+                <hgroup class="h-group" id="name-and-slogan">
+
+                        <h1 id="site-name">
+                            <a href="/" title="Home page" class="active" style="font-family:HelveticaNeue ">data @ commerce </a></h1>
+                </hgroup><!-- /end #name-and-slogan -->
+              
+
+            </div><!-- /end #branding -->
+          </header>
+        </div>
+      </div>
+    </div>
+</div>
+    
+<!--Summary-->
+     <div id="page-wrapper">
+         <div id="topblurb" style="position:relative; left:15%; width:80%; color: slategrey"> <br><br>
+    </div>
+
+<!--Dash elements-->
+    <div id="page-wrapper">
+
+        <!-- Navigation -->
+       
+        <div id="page-wrapper">
+            <div class="container-fluid">
+
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="panel panel-default" >
+                            <div class="panel-heading" style="background-color:white; font-family:Arial">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> <strong>Cumulative Data-Related IT Spend ($mil)</strong></h3>
+                            </div>
+                            <div id="graphdiv2" style="width:100%;"></div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+            <!--2014-->
+                    <div class="col-lg-2">
+                         <div class="panel panel-primary" style="background-color:white;border-color:white">
+                            <div class="panel-heading" style="background-color:white" >
+                                <div class="row" >
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge" style="color: slategrey">FY14</div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                               
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">$952m</div>
+                                        <div>Total Cost FY14 (YTD)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                 
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">27.9m</div>
+                                        <div>Web Users (Aug)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                 <!--2015-->
+                    <div class="col-lg-2">
+                         <div class="panel panel-primary" style="background-color:white;border-color:white">
+                            <div class="panel-heading" style="background-color:white" >
+                                <div class="row" >
+                                
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge" style="color: slategrey">FY15</div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                 
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">$986m</div>
+                                        <div>Total Cost (YTD)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                  
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">32.2m</div>
+                                        <div>Web Users (Aug) </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+                    </div>
+                 <!--Diff-->
+                    <div class="col-lg-2" >
+                        
+                         <div class="panel panel-primary" style="background-color:white;border-color:white">
+                            <div class="panel-heading" style="background-color:white" >
+                                <div class="row" >
+                                
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge" style="color: slategrey">%Delta</div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary" style="background-color:orange;border-color:orange">
+                            <div class="panel-heading" style="background-color:orange" >
+                                <div class="row" >
+                                
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">+3.6%</div>
+                                        <div>Change in Spend</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary" style="background-color:LimeGreen ;border-color:LimeGreen ">
+                            <div class="panel-heading" style="background-color:LimeGreen ;border-color:LimeGreen ">
+                                <div class="row">
+                                 
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">+15.3%</div>
+                                        <div>Change in Users</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+                <!-- /.row -->
+
+               
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+    
+    <!-- Dygraphs-->
+    <script type="text/javascript">
+        
+        
+          g2 = new Dygraph(
+            document.getElementById("graphdiv2"),
+            "month_process.csv", // path to CSV file
+            {//showRangeSelector: true,
+            //dateWindow: ["2015-07-15","2015-08-15"],
+            fillGraph: false,
+            stackedGraph: false,
+            drawPoints: true,
+            drawYAxis: false,
+            drawXGrid: false,
+            drawYGrid: false,
+            xlabel: 'Fiscal Months (1 = Oct, 12 = Sep)',
+            strokeWidth: 3,
+             
+            fillAlpha: 0.8,
+            colors: ['orange','blue'],
+            //visibility: [true, true, true, true, true, true, true, true, true, true, true]
+            }        
+          );
+    </script>
+    <script type="text/javascript" src="js/sequences.js"></script>
+    <script type="text/javascript">
+      // Hack to make this example display correctly in an iframe on bl.ocks.org
+      d3.select(self.frameElement).style("height", "600px");
+  </script> 
+
+
+
+</body>
+
+</html>
